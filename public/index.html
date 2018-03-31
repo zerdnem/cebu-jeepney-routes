@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    </meta>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/searchByDestination.css">
+    <link rel="stylesheet" href="/css/auto-complete.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/L.Control.Locate.min.css">
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="/js/MovingMarker.js"></script>
+    <script src="/js/auto-complete.js"></script>
+    <script src='js/L.Control.Locate.min.js'></script>
+    <title>Cebu Jeepney Routes</title>
+</head>
+
+<body>
+    <div id="mapid" class="site-box"></div>
+
+    <div id='searchContainer' class="searchContainer" style="position: fixed; display: none">
+        <input type="text" name="searchBox" id="searchBox" class="searchBox" value="" placeholder="Jeepney Route Number" title=""
+            onkeypress="getRoute(event, this, false)">
+        <input type="submit" id="searchButton" class="searchButton" value="" title="" onclick="getRoute(event, this, true)">
+        <span class="divider"></span>
+        <input type="submit" id="clearButton" class="clearButton" value="" title="" onclick="removeSearch()">
+    </div>
+
+    <div id='searchByDestinationContainer' class="searchByDestinationContainer" style="position: fixed; display: none">
+        <input type="text" name="searchByDestinationBox" id="searchByDestinationBox" class="searchByDestinationBox" value="" placeholder="Search Destination"
+            title="" onkeypress="getDestinationRoute(event, this, false)">
+        <input type="submit" id="searchByDestinationButton" class="searchByDestinationButton" value="" title="" onclick="getDestinationRoute(event, this, true)">
+        <span class="dividerDestination"></span>
+        <input type="submit" id="clearDestinationButton" class="clearDestinationButton" value="" title="" onclick="removeSearchDestination()">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script>
+        var config = {};
+        firebase.initializeApp(config);
+    </script>
+    <script src="/js/script.js"></script>
+    <script src="/js/searchByDestination.js"></script>
+</body>
+
+</html>

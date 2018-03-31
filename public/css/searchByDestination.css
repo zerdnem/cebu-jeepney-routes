@@ -1,0 +1,66 @@
+.searchByDestinationContainer {
+  position: relative;
+  top: 65px;
+  left: 58px;
+  z-index: 1001;
+  width: 280px;
+  height: 38px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  border-left: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  -moz-box-shadow: 2px 2px 2px -2px gray;
+  -webkit-box-shadow: 2px 2px 2px -2px gray;
+  box-shadow: 2px 2px 2px -2px gray;
+}
+
+.searchByDestinationBox {
+  width: 180px;
+  height: 36px;
+  border: none;
+  margin-left: 10px;
+  overflow: hidden;
+  outline: none;
+}
+
+.searchByDestinationButton {
+  background: url("/image/search_double.png") no-repeat;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: white;
+  outline: none;
+  vertical-align: middle;
+}
+
+.searchByDestinationButton:hover {
+  background: url("/image/search_double.png") no-repeat -24px 0px;
+}
+
+.clearDestinationButton {
+  background: url("/image/clear_multiple.png") no-repeat;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: white;
+  outline: none;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.clearDestinationButton:hover {
+  background: url("/image/clear_multiple.png") no-repeat -24px 0px;
+}
+
+.dividerDestination {
+  width: 24px;
+  border-left: solid 1px lightgrey;
+  margin-left: 10px;
+}
